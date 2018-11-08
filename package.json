@@ -1,0 +1,27 @@
+{
+	"name": "babel-plugin-react-prop-types-remover",
+	"version": "1.0.0",
+	"description": "Babel plugin for removing React's propTypes declarations in production builds.",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"publishConfig": {
+		"registry": "http://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ondrejbase/babel-plugin-react-prop-types-remover.git"
+	},
+	"keywords": [
+		"Babel",
+		"React",
+		"propTypes"
+	],
+	"author": "Ondrej Base <ondrej.base@gmail.com>",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/ondrejbase/babel-plugin-react-prop-types-remover/issues"
+	},
+	"homepage": "https://github.com/ondrejbase/babel-plugin-react-prop-types-remover#readme"
+}
