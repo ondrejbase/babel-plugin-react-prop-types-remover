@@ -25,7 +25,7 @@ browserify('./script.js')
   .pipe(fs.createWriteStream('bundle.js'));
 ```
 
-##Example
+## Example
 
 `script.js`:
 ```javascript
