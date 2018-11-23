@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main transform() should not remove propTypes() getter because NODE_ENV = 'dev' 1`] = `
+"class Foo {
+					static get baz() {}
+
+					static get propTypes() {}
+
+					get myFo() {}
+
+					bar() {}
+}"
+`;
+
+exports[`main transform() should not remove propTypes() getter because it isn't static 1`] = `
+"class Foo {
+					static get baz() {}
+
+					get propTypes() {}
+
+					get myFo() {}
+
+					bar() {}
+}"
+`;
+
+exports[`main transform() should not remove static propTypes() because it isn't a getter 1`] = `
+"class Foo {
+					static get baz() {}
+
+					static propTypes() {}
+
+					get myFo() {}
+
+					bar() {}
+}"
+`;
+
+exports[`main transform() should remove static propTypes() getter 1`] = `
+"class Foo {
+					static get baz() {}
+
+					get myFo() {}
+
+					bar() {}
+}"
+`;

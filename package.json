@@ -2,8 +2,9 @@
 	"name": "babel-plugin-react-prop-types-remover",
 	"version": "1.0.0",
 	"description": "Babel plugin for removing React's propTypes declarations in production builds.",
-	"main": "index.js",
+	"main": "./dist/main.js",
 	"scripts": {
+		"build": "./node_modules/.bin/gulp build",
 		"test": "jest"
 	},
 	"publishConfig": {
@@ -23,5 +24,17 @@
 	"bugs": {
 		"url": "https://github.com/ondrejbase/babel-plugin-react-prop-types-remover/issues"
 	},
-	"homepage": "https://github.com/ondrejbase/babel-plugin-react-prop-types-remover#readme"
+	"homepage": "https://github.com/ondrejbase/babel-plugin-react-prop-types-remover#readme",
+	"devDependencies": {
+		"@babel/core": "^7.1.5",
+		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+		"gulp": "^4.0.0",
+		"gulp-babel": "^8.0.0",
+		"jest": "^23.6.0"
+	},
+	"jest": {
+		"transform": {
+			"\\.js": "./preprocess.js"
+		}
+	}
 }
