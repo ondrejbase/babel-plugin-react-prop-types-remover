@@ -46,11 +46,12 @@ class ProptypesRemover {
 	/**
 	 * Checks if this plugin should remove propTypes.
 	 *
-	 * @param {string} [environment=process.env.NODE_ENV] The environment.
+	 * @param {string} [environment=process.env.NODE_ENV || 'dev']
+	 *        The environment.
 	 * @return {boolean} `true` when it should remove propTypes, otherwise
 	 *         `false`.
 	 */
-	_shouldRemoveProptypes(environment = process.env.NODE_ENV) {
+	_shouldRemoveProptypes(environment = process.env.NODE_ENV || 'dev') {
 		if (!environment || typeof environment !== 'string') {
 			this._error(
 				new TypeError('Argument environment must be a string.')
